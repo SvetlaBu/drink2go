@@ -1,0 +1,25 @@
+.filter,
+.filter__title,
+.filter__list,
+.filter__item {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.filter__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.filter__list,
+.filter__item {
+  appearance: none;
+  list-style: none;
+  display: block;
+}
+
+.filter__item {
+  padding-left: 50px;
+}

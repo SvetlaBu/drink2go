@@ -1,0 +1,39 @@
+.control__label {
+  margin: 0;
+  text-align: start;
+}
+
+.control {
+  position: relative;
+}
+
+.control__mark {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  left: -40px;
+  background-color: #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.control::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -40px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.control__mark:focus,
+.control__mark:focus-visible {
+  border: 3px solid #83B3D3;
+}
+
+.control__mark:disabled {
+  background-color:#FFFFFF;
+}
