@@ -1,55 +1,38 @@
 /* в этот файл добавляет скрипты*/
-import Swiper from 'swiper/bundle';
-var swiper = new Swiper('.swiper__container', {
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false
-  },
-  loop: true,
-  watchSlidesProgress: true
-});
+ // Creating map options
+ var mapOptions = {
+  center: [59.968137, 30.316272],
+  zoom: 35
+}
+// Creating a map object
+var map = new L.map('map', mapOptions);
 
-// var swiperEl = document.querySelector('.swiper-container');
+// Creating a Layer object
+var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 
-swiperEl.addEventListener('mouseenter', function(event) {
-  const el = event.target;
-  if (el && el.matches && el.matches('.swiper__container')) {
-    // console.log('mouseenter');
-    // console.log('autoplay running', swiper.autoplay.running);
-    el.swiper.autoplay.stop();
-    el.classList.add('swiper-paused');
+// Adding layer to the map
+map.addLayer(layer);
 
-    const activeNavItem = el.querySelector('.swiper-pagination-bullet-active');
-    activeNavItem.style.animationPlayState="paused";
-  }
-}, true);
+// Icon options
+var iconOptions = {
+  iconUrl: 'img/map/pin.png',
+  iconSize: [40, 50]
+}
+// Creating a custom icon
+var customIcon = L.icon(iconOptions);
 
-document.addEventListener('mouseleave', event => {
-  // console.log('mouseleave', swiper.activeIndex, swiper.slides[swiper.activeIndex].progress);
-  // console.log('autoplay running', swiper.autoplay.running);
-  const el = event.target;
-  if (el && el.matches && el.matches('.swiper__container')) {
-    el.swiper.autoplay.start();
-    el.classList.remove('swiper-paused');
+// Creating Marker Options
+var markerOptions = {
+  title: "Location",
+  clickable: true,
+  draggable: true,
+  icon: customIcon
+}
+// Creating a Marker
+var marker = L.marker([59.968137, 30.316272], markerOptions);
 
-    const activeNavItem = el.querySelector('.swiper-pagination-bullet-active');
+// Adding popup to the marker
+marker.bindPopup('Энергия аккумулируется здесь').openPopup();
 
-    activeNavItem.classList.remove('swiper-pagination-bullet-active');
-    // activeNavItem.style.animation = 'none';
-
-    setTimeout(() => {
-      activeNavItem.classList.add('swiper-pagination-bullet-active');
-      // activeNavItem.style.animation = '';
-    }, 10);
-  }
-}, true);
-
-swiper();
+// Adding marker to the map
+marker.addTo(map);

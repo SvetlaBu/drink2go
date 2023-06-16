@@ -28,4 +28,31 @@
   padding: 60px 0 32px;
   height: 142px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.advantages__item::before {
+  content: " ";
+  position: absolute;
+  background-image: url("/img/decor/eco.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.advantages__item--fit::before {
+  background-image: url("/img/decor/fit.png");
+}
+
+.advantages__item--energy::before {
+  background-image: url("/img/decor/energy.png");
+}
+
+.advantages__item--speed::before {
+  background-image: url("/img/decor/speed.png");
 }
