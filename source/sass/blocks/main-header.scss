@@ -3,40 +3,46 @@
   position: relative;
 }
 
-.main-header__wrapper {
-  padding: 10px 20px;
+.main-header__nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 40px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+.main-header__wrapper {
+  padding: 10px 20px;
   box-sizing: border-box;
 }
 
 .main-header__logo {
-  flex: 0 0 30%;
   padding: 0;
   margin: 0;
   display: block;
 }
 
 .main-header__logo-image {
-  width: 50%;
+  width: 32px;
+  height: 36px;
   display: inline-block;
   padding: 0;
   margin: 0;
-
 }
 
 .main-header__icon {
-  flex: 0 0 20%;
   padding: 0;
-  margin: 0;
-  display: block;
+  margin: 10px;
+  display: inline-block;
 }
 
-.main-header__logo-icon
-{
-  width: 100%;
+.main-header__logo-icon {
+  width: 16px;
+  height: 16px;
+  padding: 15px;
 }
 
 @media (min-width: $tablet-width) {

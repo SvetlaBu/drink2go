@@ -1,0 +1,77 @@
+.page-footer {
+  background-color: #ffffff;
+}
+
+.page-footer__wrapper {
+  padding: 20px;
+  border-bottom: 1px solid #f0ebff;
+}
+
+.page-footer__links {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #f0ebff;
+}
+
+.page-footer__logo-image {
+  width: 32px;
+}
+
+.page-footer__link {
+  flex: 0 0 20%;
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+
+.page-footer__letters-left::before {
+  content: "D";
+  visibility: visible;
+}
+
+.page-footer__letters-right::before {
+  content: "G";
+  visibility: visible;
+}
+
+.page-footer__letters-left::before,
+.page-footer__letters-right::before {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 800;
+}
+
+.page-footer__title {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: $accent;
+  letter-spacing: 2%;
+  margin-bottom: 12px;
+}
+
+.page-nav__list {
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  list-style: none;
+}
+
+.page-nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #333333;
+  letter-spacing: 2%;
+}
+
+.page-footer__copiright {
+  text-align: center;
+}

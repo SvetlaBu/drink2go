@@ -34,7 +34,7 @@
 .advantages__item::before {
   content: " ";
   position: absolute;
-  background-image: url("/img/decor/eco.png");
+  background-image: url("/img/decor/eco.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 50px;
@@ -46,13 +46,13 @@
 }
 
 .advantages__item--fit::before {
-  background-image: url("/img/decor/fit.png");
+  background-image: url("/img/decor/fit.svg");
 }
 
 .advantages__item--energy::before {
-  background-image: url("/img/decor/energy.png");
+  background-image: url("/img/decor/energy.svg");
 }
 
 .advantages__item--speed::before {
-  background-image: url("/img/decor/speed.png");
+  background-image: url("/img/decor/speed.svg");
 }
