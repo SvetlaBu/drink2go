@@ -1,0 +1,75 @@
+.range__wrapper {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 118px 118px;
+  position: relative;
+}
+
+.range__label {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.range__wrapper::after {
+  content: " ";
+  width: 8px;
+  height: 2px;
+  position: absolute;
+  color: #bdbdbd;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% 50%);
+}
+
+.range__input {
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 8px;
+  border: 2px solid #9070ec;
+  border-radius: 4px;
+  box-sizing: border-box;
+  appearance: none;
+  -moz-apperance: textfield;
+  margin: 0;
+}
+
+.range__bar {
+  position: relative;
+  height: 4px;
+  background: linear-gradient(to right, #9070ec 90%, #e2e2e2 10%);
+}
+
+.range__scale {
+  padding: 40px 20px;
+}
+
+.range__toggle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border: 2px solid #9070ec;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range__toggle--max {
+  left: 85%;
+}
+
+.range__toggle:hover {
+  background: #ffffff;
+}
+
+.range__toggle:focus {
+  border: 3px solid #83B3D3;
+  background: #ffffff;
+}
+
+.range__toggle:active {
+  border: 2px solid #83B3D3;
+  background: #ffffff;
+}

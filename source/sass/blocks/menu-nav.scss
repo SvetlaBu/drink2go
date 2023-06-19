@@ -5,19 +5,31 @@
   background-color: $white;
 }
 
-.menu-nav--closed + .page-header__toggle::before {
+.menu-nav__toggle {
+  position: absolute;
+  right: -20px;
+  top: -62px;
+  display: block;
+  padding: 22px;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.menu-nav--closed > .menu-nav__toggle::before {
   content: "";
   position: absolute;
   z-index: 2;
-  right: 0;
-  top: 6px;
-  width: 24px;
+  right: 50%;
+  top: 40%;
+  transform: translate(50%, 50%);
+  width: 16px;
   height: 1.5px;
-  background-color: $black;
-  box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+  background-color: #333333;
+  box-shadow: 0 4px 0 0 #333333, 0 9px 0 0 #333333;
 }
 
-.menu-nav--opened + .page-header__toggle {
+.menu-nav--opened + .menu-nav {
   position: absolute;
   top: 6px;
   right: 10px;
@@ -36,7 +48,7 @@
     right: 10px;
     width: 24px;
     height: 1.5px;
-    background-color: $black;
+    background-color: #333333;
   }
 
   &::before {
@@ -53,7 +65,7 @@
     opacity: 0.3;
   }
 
-  .menu-nav--nojs ~ .page-header__toggle {
+  .menu-nav--nojs ~ .menu-nav {
     display: none;
   }
 
@@ -81,21 +93,19 @@
 
 @media (min-width: $tablet-width) {
   .menu-nav {
+    flex: 0 1 75%;
     position: relative;
-    display: inline;
-    margin-left: 68px;
-    margin-top: 4px;
+    margin: 0;
   }
 
-  .menu-nav__toggle {
+  .menu-nav__toggle,
+  .menu-nav__toggle::before {
     display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .menu-nav {
-    width: 50%;
-    display: inline;
-    justify-self: end;
+    flex: 0 1 65%;
   }
 }

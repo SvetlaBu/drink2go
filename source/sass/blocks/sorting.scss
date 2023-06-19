@@ -2,6 +2,16 @@
   background-color: #f8f8f8;
   padding: 18px;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+  }
 }
 
 .sorting__container {
@@ -11,6 +21,10 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    width: 40%;
+  }
 }
 
 .sorting__title,
@@ -21,11 +35,18 @@
   display: inline-block;
 }
 
+.sorting__title {
+  @media (min-width: $tablet-width) {
+    margin-right: 16px;
+  }
+}
+
 .sorting__control {
   box-sizing: border-box;
   color: $accent;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  background-color: #ffffff;
+  background-color: #f8f8f8;
+  border: none;
 }

@@ -14,10 +14,21 @@
 
 .button--app,
 .button--reset {
-  width: 100%;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 137px;
+    margin-right: 20px;
+    display: inline-block;
+  }
 }
 
 .button--reset {
   color: $accent;
   background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    width: 120px;
+    margin-right: 0;
+  }
 }

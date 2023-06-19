@@ -8,15 +8,34 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+    justify-content: end;
+  }
 }
 
 .pagination__item {
   display: inline-block;
+  padding: 0;
   flex: 0 1 15%;
   border-radius: 4px;
   background-color: #ffffff;
   align-self: center;
   text-align: center;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    flex: 0 0 40px;
+  }
+}
+
+.pagination__item:first-of-type,
+.pagination__item:last-of-type {
+  @media (min-width: $tablet-width) {
+    flex: 0 0 90px;
+    box-sizing: border-box;
+  }
 }
 
 .pagination__link {

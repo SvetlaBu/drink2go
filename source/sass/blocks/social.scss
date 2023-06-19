@@ -7,3 +7,9 @@
   flex-wrap: wrap;
   column-gap: 10px;
 }
+
+.social__item {
+  @media (min-width: $tablet-width) {
+    padding: 10px;
+  }
+}

@@ -3,16 +3,74 @@
   position: relative;
 }
 
-.carousel__items {
-  width: 88%;
-  height: 400px;
-  display: grid;
-  grid-column: 1fr;
-  margin: 0 auto;
+.carousel a {
+  appearance: none;
+  text-decoration: none;
+}
+
+.carousel__title {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+  letter-spacing: 2%;
+  text-align: center;
   padding: 0;
+  margin-bottom: 10px;
+  color: #333333;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.carousel__title::before {
+  content: "новинка!";
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 4%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $accent;
+}
+
+.carousel__description {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  padding: 0;
+  color: #333333;
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.carousel__items {
+  width: 84%;
+  height: 656px;
+  display: grid;
+  margin: 0 auto;
+  padding: 20px 0;
+  box-sizing: border-box;
   overflow: hidden;
   list-style: none;
   background-color: #f3ebe1;
+
+  @media (min-width: $tablet-width) {
+    height: 828px;
+    background: linear-gradient(#f3ebe1 70%, #ffffff 30%);
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+    background: #f3ebe1;
+  }
 }
 
 .carousel__item {
@@ -29,23 +87,73 @@
   grid-row: 1/-1;
   opacity: 1;
   transition: 0.5s;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 50% 50%;
+  }
 }
 
 .carousel__item--show img {
   max-width: 100%;
-  width: 130px;
-  height: 188px;
+  width: 280px;
+  height: 280px;
   display: block;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+    grid-row: 2/-1;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+    grid-row: 1/-1;
+    grid-column: 1/2;
+  }
+}
+
+.carousel__wrapper {
+  @media (min-width: $tablet-width) {
+    grid-row: 1/2;
+    padding: 40px 40px 0 40px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1/-1;
+    grid-column: 2/-1;
+    padding: 0;
+    box-sizing: border-box;
+    align-self: center;
+  }
 }
 
 .carousel__button {
   position: absolute;
   top: 0;
-  width: 20px;
+  width: 6%;
   height: 100%;
   background-color: #f3ebe1;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    width: 8%;
+    background: linear-gradient(#f3ebe1 70%, #ffffff 30%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: #f3ebe1;
+  }
 }
 
 .carousel__button--prev::before {
@@ -64,4 +172,47 @@
   font-size: 20px;
   color: $accent;
   visibility: visible;
+}
+
+.carousel__order {
+  display: grid;
+  grid-template-rows: 40px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 2fr;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 40px 60px 114px;
+  }
+}
+
+.carousel__price {
+  line-height: 32px;
+}
+
+.carousel__price--old {
+  font-size: 16px;
+  font-weight: 400;
+  color: $accent;
+  text-decoration: line-through;
+  text-decoration-color: $accent;
+  justify-self: end;
+  margin-right: 6px;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    justify-self: start;
+  }
+}
+
+.carousel__price--new {
+  font-size: 20px;
+  font-weight: 600;
 }

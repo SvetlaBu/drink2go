@@ -7,6 +7,10 @@
   padding: 0;
   margin: 0 auto;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+  }
 }
 
 .advantages {
@@ -17,10 +21,26 @@
   appearance: none;
   list-style: none;
   display: block;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 50px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .advantages__title {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+  }
 }
 
 .advantages__item {
@@ -29,6 +49,16 @@
   height: 142px;
   box-sizing: border-box;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 0 40px;
+    height: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 0 0 0;
+    align-self: center;
+  }
 }
 
 .advantages__item::before {
@@ -37,12 +67,29 @@
   background-image: url("/img/decor/eco.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 50px;
+  width: 48px;
   height: 50px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    top: -5%;
+    left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 0;
+    left: 50%;
+  }
+}
+
+.advantages__name,
+.advantages__description {
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
 }
 
 .advantages__item--fit::before {

@@ -5,7 +5,18 @@
   color: #bdbdbd;
   text-decoration: none;
   appearance: none;
+  margin: 0;
+  padding: 0;
   display: flex;
+  justify-content: center;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+}
+
+.copyright__logo {
+  margin-left: 6px;
 }
 

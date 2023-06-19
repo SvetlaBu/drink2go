@@ -6,10 +6,27 @@
 
 .catalog {
   background-color: #f8f8f8;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    width: 60%;
+  }
 }
 
 .catalog__list {
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    width: 100%;
+  }
+
+  .catalog__list li {
+    flex: 0 0 50%;
+    flex-direction: row;
+  }
 }

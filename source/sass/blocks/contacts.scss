@@ -2,6 +2,10 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 20px;
+  }
 }
 
 .contacts__item a {

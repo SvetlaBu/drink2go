@@ -3,8 +3,22 @@
 }
 
 .page-footer__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+.page-footer__section {
   padding: 20px;
   border-bottom: 1px solid #f0ebff;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+    display: inline-block;
+    width: 27%;
+  }
 }
 
 .page-footer__links {
@@ -18,6 +32,10 @@
 
 .page-footer__logo-image {
   width: 32px;
+
+  @media (min-width: $tablet-width) {
+    height: 36px;
+  }
 }
 
 .page-footer__link {
@@ -30,11 +48,19 @@
 .page-footer__letters-left::before {
   content: "D";
   visibility: visible;
+
+  @media (min-width: $tablet-width) {
+    content: "DRINK";
+  }
 }
 
 .page-footer__letters-right::before {
   content: "G";
   visibility: visible;
+
+  @media (min-width: $tablet-width) {
+    content: "GO";
+  }
 }
 
 .page-footer__letters-left::before,
@@ -42,6 +68,11 @@
   font-size: 20px;
   line-height: 20px;
   font-weight: 800;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .page-footer__title {
@@ -53,25 +84,4 @@
   color: $accent;
   letter-spacing: 2%;
   margin-bottom: 12px;
-}
-
-.page-nav__list {
-  padding: 0;
-  margin: 0;
-  appearance: none;
-  list-style: none;
-}
-
-.page-nav__link {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 500;
-  color: #333333;
-  letter-spacing: 2%;
-}
-
-.page-footer__copiright {
-  text-align: center;
 }
