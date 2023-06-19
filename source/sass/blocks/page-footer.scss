@@ -1,5 +1,25 @@
 .page-footer {
   background-color: #ffffff;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-rows: 4fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.page-footer__location {
+  @media (min-width: $desktop-width) {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+  }
+}
+
+.page-footer__block {
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
 }
 
 .page-footer__wrapper {
@@ -7,6 +27,11 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+
+    @media (min-width: $desktop-width) {
+      grid-column: 2/-1;
+      grid-row: 2/3;
+    }
   }
 }
 
@@ -28,6 +53,12 @@
   align-items: center;
   flex-wrap: wrap;
   border-bottom: 1px solid #f0ebff;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    align-items: start;
+    border-bottom: none;
+  }
 }
 
 .page-footer__logo-image {
@@ -43,6 +74,27 @@
   display: flex;
   align-items: center;
   column-gap: 6px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 60px;
+    position: relative;
+    flex: 0 0 60%;
+  }
+}
+
+.page-footer__link::after {
+  @media (min-width: $desktop-width) {
+    content: "Интернет-магазин кофейных напитков";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    visibility: visible;
+    width: 340px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #333333;
+  }
 }
 
 .page-footer__letters-left::before {
@@ -84,4 +136,11 @@
   color: $accent;
   letter-spacing: 2%;
   margin-bottom: 12px;
+}
+
+.page-footer__copyright {
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-1;
+    grid-row: 3/-1;
+  }
 }

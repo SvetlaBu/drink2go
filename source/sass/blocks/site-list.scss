@@ -22,8 +22,17 @@
   position: relative;
 }
 
-.site-list__link:hover {
-  color: rgba(0, 0, 0, 0.6);
+.site-list__item:hover .site-list__link,
+.site-list__item:focus .site-list__link {
+  color: $accent;
+}
+
+.site-list__item:active .site-list__link {
+  color: $accent;
+}
+
+.site-list__item:active {
+  background-color: #f0ebff;
 }
 
 .site-list__link:disabled {

@@ -37,8 +37,20 @@
 
 .range__bar {
   position: relative;
+  height: 2px;
+  background-color: #e2e2e2;
+}
+
+.range__bar::after {
+  content: "";
+  width: 93%;
   height: 4px;
-  background: linear-gradient(to right, #9070ec 90%, #e2e2e2 10%);
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  background: $accent;
+  z-index: 2;
 }
 
 .range__scale {
@@ -54,6 +66,7 @@
   border: 2px solid #9070ec;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 3;
 }
 
 .range__toggle--max {

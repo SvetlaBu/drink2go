@@ -8,8 +8,26 @@
   column-gap: 10px;
 }
 
+.social__item svg {
+  fill: #bdbdbd;
+}
+
 .social__item {
   @media (min-width: $tablet-width) {
     padding: 10px;
   }
+}
+
+.social__item:hover,
+.social__item:focus {
+  background-color: #f0ebff;
+}
+
+.social__item:active {
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+.social__item:hover svg,
+.social__item:focus svg {
+  color: $accent;
 }

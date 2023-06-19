@@ -54,8 +54,29 @@
 
 .product-card__button {
   flex: 0 0 60%;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     flex: 0 0 45%;
+    padding-left: 20px;
+  }
+}
+
+.product-card__button::before {
+  content: " ";
+  position: absolute;
+  background-image: url("/img/decor/basket-card.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  width: 38px;
+  height: 28px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    width: 48px;
   }
 }

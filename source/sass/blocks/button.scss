@@ -12,6 +12,20 @@
   outline: none;
 }
 
+.button:hover,
+.button:focus {
+  background-color: #9070ec;
+}
+
+.button:active {
+  background-color: #593cac;
+}
+
+.button:disabled {
+  background-color: #bdbdbd;
+}
+
+
 .button--app,
 .button--reset {
   width: 280px;
@@ -31,4 +45,17 @@
     width: 120px;
     margin-right: 0;
   }
+}
+
+.button--reset:hover,
+.button--reset:focus {
+  color: #ffffff;
+}
+
+.button--reset:active {
+  color: #ffffff;;
+}
+
+.button--reset:disabled {
+  color: #ffffff;
 }

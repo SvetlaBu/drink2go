@@ -6,11 +6,6 @@
 
 .catalog {
   background-color: #f8f8f8;
-
-  @media (min-width: $desktop-width) {
-    display: inline-block;
-    width: 60%;
-  }
 }
 
 .catalog__list {
@@ -21,12 +16,18 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 30px;
+    justify-content: space-between;
     width: 100%;
   }
+}
 
-  .catalog__list li {
-    flex: 0 0 50%;
+.catalog__list li {
+  @media (min-width: $tablet-width) {
+    flex: 0 0 48%;
     flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex: 0 0 31%;
   }
 }

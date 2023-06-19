@@ -15,7 +15,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -36,6 +36,8 @@
 }
 
 .products__filter {
+  border: none;
+
   @media (min-width: $tablet-width) {
     grid-row: 1/2;
   }
@@ -50,5 +52,9 @@
     grid-row: 2/-1;
     grid-column: 1/-1;
     justify-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 300px;
   }
 }

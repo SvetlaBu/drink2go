@@ -59,14 +59,27 @@
   color: #333333;
 }
 
-.pagination__item:not(:first-child):hover,
-.pagination__item:not(:first-child):focus {
-  background-color: #f2f2f2;
+.pagination__item:hover,
+.pagination__item:focus {
+  background-color: #9070ec;
+  color: #ffffff;
 }
 
-.pagination__item:not(:first-child):active {
-  background-color: #f2f2f2;
-  color: rgba(255, 255, 255, 0.3);
+.pagination__item:active {
+  background-color: #593cac;
+  color: #ffffff;
+}
+
+.pagination__item:disabled {
+  background-color: #e2e2e2;
+  color: #ffffff;
+}
+
+.pagination__item:hover .pagination__link,
+.pagination__item:focus .pagination__link,
+.pagination__item:active .pagination__link,
+.pagination__item:disabled .pagination__link {
+  color: #ffffff;
 }
 
 .pagination__left::before {

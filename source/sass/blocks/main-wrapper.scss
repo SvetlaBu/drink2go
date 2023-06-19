@@ -4,7 +4,8 @@
     display: grid;
     grid-template-columns: 25% 75%;
     grid-template-rows: 10% 90%;
-    padding-top: 60px;
+    padding: 100px 0 40px;
+    background-color: #f8f8f8;
     position: relative;
   }
 
@@ -16,6 +17,7 @@
   .main-wrapper__sorting {
     grid-column: 2/-1;
     grid-row: 1/2;
+    justify-self: end;
   }
 
   .main-wrapper__catalog {

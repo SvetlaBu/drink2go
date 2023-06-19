@@ -25,6 +25,11 @@
   @media (min-width: $tablet-width) {
     width: 40%;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 320px;
+    box-sizing: border-box;
+  }
 }
 
 .sorting__title,

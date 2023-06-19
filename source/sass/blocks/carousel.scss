@@ -29,12 +29,16 @@
   font-size: 12px;
   line-height: 14px;
   font-weight: 700;
-  letter-spacing: 4%;
   position: absolute;
   top: -20px;
   left: 50%;
   transform: translateX(-50%);
   color: $accent;
+
+  @media (min-width: $desktop-width) {
+    left: 0;
+    transform: none;
+  }
 }
 
 .carousel__description {
@@ -52,7 +56,7 @@
 }
 
 .carousel__items {
-  width: 84%;
+  width: 88%;
   height: 656px;
   display: grid;
   margin: 0 auto;
@@ -64,6 +68,7 @@
 
   @media (min-width: $tablet-width) {
     height: 828px;
+    width: 84%;
     background: linear-gradient(#f3ebe1 70%, #ffffff 30%);
   }
 
@@ -145,6 +150,7 @@
   height: 100%;
   background-color: #f3ebe1;
   border: none;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 8%;
@@ -154,6 +160,34 @@
   @media (min-width: $desktop-width) {
     background: #f3ebe1;
   }
+}
+
+.carousel__button:hover,
+.carousel__button:focus {
+  background: linear-gradient(to left, #ffffff 10%, #f3ebe1 80%);
+}
+
+.carousel__button:active {
+  background: linear-gradient(to right, #f3ebe1 10%, #7859cf 70%);
+  opacity: 0.2;
+}
+
+.carousel__button:disabled {
+  opacity: 0.2;
+}
+
+.carousel__button--prev:hover,
+.carousel__button--prev:focus {
+  background: linear-gradient(to right, #ffffff 10%, #f3ebe1 80%);
+}
+
+.carousel__button--prev:active {
+  background: linear-gradient(to left, #f3ebe1 10%, #7859cf 70%);
+  opacity: 0.2;
+}
+
+.carousel__button--prev:disabled {
+  opacity: 0.2;
 }
 
 .carousel__button--prev::before {
@@ -215,4 +249,13 @@
 .carousel__price--new {
   font-size: 20px;
   font-weight: 600;
+}
+
+.carousel__pagination {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+  }
 }
