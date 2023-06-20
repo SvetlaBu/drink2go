@@ -60,3 +60,18 @@ document.body.querySelector('.carousel__button--next').addEventListener ('click'
       list[list.length - 1].classList.add('carousel__item--show');
     }
 });
+
+let navMain = document.querySelector('.menu-nav');
+let navToggle = document.querySelector('.menu-nav__toggle');
+
+navMain.classList.remove('menu-nav--nojs');
+
+navToggle.addEventListener('click', function () {
+  if (navMain.classList.contains('menu-nav--closed')) {
+    navMain.classList.remove('menu-nav--closed');
+    navMain.classList.add('menu-nav--opened');
+  } else {
+    navMain.classList.add('menu-nav--closed');
+    navMain.classList.remove('menu-nav--opened');
+  }
+});
