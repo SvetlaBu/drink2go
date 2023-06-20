@@ -27,6 +27,10 @@
   background-color: rgba(120, 89, 207, 0.25);
 }
 
+.social__pick {
+  color: #bdbdbd;
+}
+
 .social__item:hover svg,
 .social__item:focus svg {
   color: $accent;

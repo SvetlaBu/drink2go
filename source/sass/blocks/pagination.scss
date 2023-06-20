@@ -85,9 +85,17 @@
 .pagination__left::before {
   content: "<";
   visibility: visible;
+
+  @media (min-width: $desktop-width) {
+    content: "Назад";
+  }
 }
 
 .pagination__right::before {
   content: ">";
   visibility: visible;
+
+  @media (min-width: $desktop-width) {
+    content: "Вперёд";
+  }
 }

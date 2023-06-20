@@ -4,25 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Drink2Go Интернет-магазин кофейных напитков</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
-		<link rel="icon" href="favicon-32x32.png" type="image/svg+xml">
-		<link rel="manifest" href="manifest.json">
+    <link rel="icon" href="img/favicons/favicon-32x32.png" type="image/svg+xml">
+		<link rel="manifest" href="/manifest.webmanifest">
+    <link rel="manifest" href="img/favicons/manifest.json">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   </head>
   <body class="page-body">
     <header class="main-header page-header">
       <h1 class="visually-hidden">Интерент-магазин кофейных напитков</h1>
       <div class="main-header__wrapper">
         <a class="main-header__logo" href="index.html"><span class="main-header__letters-left"></span>
-          <svg class="main-header__logo-image" role="img" aria-label="Логотип ароматное зерно кофе.">
+          <svg class="main-header__logo-image" role="img" width="32" height="36" aria-label="Логотип ароматное зерно кофе.">
             <use xlink:href="img/icons/stack.svg#logo-desktop"></use>
           </svg><span class="main-header__letters-right"></span>
         </a>
-        <nav class="menu-nav menu-nav--closed">
+        <nav class="menu-nav menu-nav--nojs">
           <ul class="menu-nav__list site-list">
             <li class="site-list__item">
               <a class="site-list__link site-list__link--current" href="#">
@@ -50,11 +49,11 @@
         </nav>
         <div class="main-header__nav">
           <a class="main-header__icon" href="#">
-            <svg class="main-header__logo-icon">
+            <svg class="main-header__logo-icon" width="16" height="16">
               <use xlink:href="img/icons/stack.svg#user"></use>
             </svg>
           </a>
-          <a class="main-header__icon" href="#">
+          <a class="main-header__icon" href="#" width="16" height="16">
             <svg class="main-header__logo-icon">
               <use xlink:href="img/icons/stack.svg#basket"></use>
             </svg>
@@ -69,8 +68,8 @@
             <picture>
               <source media="(min-width: 1440px)" type="image/webp" srcset="img/carousel/flat_white__desctop.webp, img/carousel/flat_white__desctop@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/carousel/flat_white__desctop.png, img/carousel/flat_white__desctop@2x.png 2x">
-              <source media="(min-width: 768px)" type="image/webp" srcset="img/carousel/flat_white___tablet.webp, img/carousel/flat_white___tablet@2x.webp 2x">
-              <source media="(min-width: 768px)" srcset="img/carousel/flat_white___tablet.png, img/carousel/flat_white___tablet@2x.png 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/carousel/flat_white__tablet.webp, img/carousel/flat_white___tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/carousel/flat_white__tablet.png, img/carousel/flat_white___tablet@2x.png 2x">
               <source media="(min-width: 230px)" type="image/webp" srcset="img/carousel/flat_white.webp, img/carousel/flat_white@2x.webp 2x">
               <img src="img/carousel/flat_white.png" srcset="img/carousel/flat_white.png 2x" width="280" height="280" alt="Свежий кофе в жестяной банке.">
             </picture>
@@ -96,7 +95,7 @@
               <source media="(min-width: 768px)" type="image/webp" srcset="img/carousel/lavender_tablet.webp, img/carousel/lavender_tablet@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/carousel/lavender__tablet.png, img/carousel/lavender__tablet@2x.png 2x">
               <source media="(min-width: 230px)" type="image/webp" srcset="img/carousel/lavender.webp, img/carousel/lavender@2x.webp 2x">
-              <img src="img/carousel/lavender.png" srcset="img/carousel/lavender@2x.png 2x" width="280" height="280" alt="Свежийй кофе в жестяной банке.">
+              <img src="img/carousel/lavender.png" srcset="img/carousel/lavender@2x.png 2x" width="280" height="280" alt="Свежий кофе в жестяной банке.">
             </picture>
             <div class="carousel__wrapper">
               <a class="carousel__link" href="#">
@@ -120,7 +119,7 @@
               <source media="(min-width: 768px)" type="image/webp" srcset="img/carousel/espresso_tablet.webp, img/carousel/espresso_tablet@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/carousel/espresso_tablet.png, img/carousel/espresso_tablet@2x.png 2x">
               <source media="(min-width: 230px)" type="image/webp" srcset="img/carousel/espresso.webp, img/carousel/espresso@2x.webp 2x">
-              <img src="img/carousel/espresso.png" srcset="img/carousel/espresso@2x.png 2x" width="280" height="280" alt="Свежийй кофе в жестяной банке.">
+              <img src="img/carousel/espresso.png" srcset="img/carousel/espresso@2x.png 2x" width="280" height="280" alt="Свежий кофе в жестяной банке.">
             </picture>
             <div class="carousel__wrapper">
               <a class="carousel__link" href="#">
@@ -138,6 +137,11 @@
             </div>
           </li>
         </ul>
+        <div class="carousel__pagination">
+          <a class="carousel__togle" href="#"></a>
+          <a class="carousel__togle" href="#"></a>
+          <a class="carousel__togle" href="#"></a>
+        </div>
         <button class="carousel__button carousel__button--prev">
         </button>
         <button class="carousel__button carousel__button--next">
@@ -445,7 +449,7 @@
       <div class="page-footer__block">
         <div class="page-footer__links">
           <a class="page-footer__link"><span class="page-footer__letters-left"></span>
-            <svg class="page-footer__logo-image" role="img" aria-label="Логотип ароматное зерно кофе.">
+            <svg class="page-footer__logo-image" role="img" width="32" height="36" aria-label="Логотип ароматное зерно кофе.">
               <use xlink:href="img/icons/stack.svg#logo-desktop"></use>
             </svg><span class="page-footer__letters-right"></span>
           </a>
@@ -513,7 +517,7 @@
         </section>
       </div>
       <div class="page-footer__copyright copyright">
-        <a class="copyright__text" href="https://htmlacademy.ru">Разработано в HTML Academy
+        <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">Разработано в HTML Academy
           <svg class="copyright__logo" width="27" height="36">
             <use xlink:href="img/icons/stack.svg#htmlacademy"></use>
           </svg>

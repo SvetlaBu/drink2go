@@ -3,7 +3,7 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-rows: 4fr 2fr 1fr;
+    grid-template-rows: 5fr 2fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
@@ -136,6 +136,10 @@
   color: $accent;
   letter-spacing: 2%;
   margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
 }
 
 .page-footer__copyright {

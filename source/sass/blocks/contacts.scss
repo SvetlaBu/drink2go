@@ -2,10 +2,29 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     margin-left: 20px;
+    margin-bottom: 20px;
   }
+}
+
+.contacts__item::before {
+  content: " ";
+  position: absolute;
+  background-image: url("/img/decor/phone.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 22px;
+  height: 27px;
+  top: -6px;
+  left: -22px;
+  z-index: 2;
+}
+
+.contacts__item:last-of-type::before {
+  background-image: url("/img/decor/marker.svg");
 }
 
 .contacts__item a {

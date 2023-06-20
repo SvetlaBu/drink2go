@@ -12,6 +12,13 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+  }
 
   @media (min-width: $desktop-width) {
     position: absolute;
@@ -37,6 +44,7 @@
 
 .products__filter {
   border: none;
+  width: 280px;
 
   @media (min-width: $tablet-width) {
     grid-row: 1/2;
