@@ -4,7 +4,7 @@
 
   @media (min-width: $desktop-width) {
     display: inline-block;
-    width: 25%;
+    // width: 25%;
   }
 }
 
@@ -44,7 +44,6 @@
 
 .products__filter {
   border: none;
-  width: 280px;
 
   @media (min-width: $tablet-width) {
     grid-row: 1/2;

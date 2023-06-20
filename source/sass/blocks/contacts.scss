@@ -3,9 +3,9 @@
   line-height: 20px;
   font-weight: 400;
   position: relative;
+  margin-left: 20px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 20px;
     margin-bottom: 20px;
   }
 }
