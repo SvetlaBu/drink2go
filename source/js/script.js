@@ -40,55 +40,62 @@ marker.addTo(map);
 // Carousel On
 
 let list = Array.from(document.body.querySelectorAll('.carousel__item'));
+let pagination = Array.from(document.body.querySelectorAll('.carousel__toggle'));
 
-let element = document.body.querySelector('.carousel__items');
+let element = document.body.querySelector('.carousel');
+const changeBackground = () => {
+  i = list.indexOf(document.body.querySelector('.carousel__item--show'));
+switch (i) {
+  case 0:
+    element.style.cssText = 'background-color: #f3ebe1';
+    break;
+  case 1:
+    element.style.cssText = 'background-color: #eae6fc';
+    break;
+  case 2:
+    element.style.cssText = 'background-color: #e5e6e8';
+    break;
+  }
+};
 
 document.body.querySelector('.carousel__button--prev').addEventListener ('click', () => {
 	j = list.indexOf(document.body.querySelector('.carousel__item--show'));
 	document.body.querySelector('.carousel__item--show').classList.remove('carousel__item--show');
+  document.body.querySelector('.carousel__toggle--active').classList.remove('carousel__toggle--active');
   if (j >= 1) {
 		list[j-1].classList.add('carousel__item--show');
 		} else {
 			list[0].classList.add('carousel__item--show');
 		}
-    i = list.indexOf(document.body.querySelector('.carousel__item--show'));
-    switch (i) {
-      case 0:
-        element.style.cssText = 'background: #f3ebe1';
-        break;
-      case 1:
-        element.style.cssText = 'background: #eae6fc';
-        break;
-      case 2:
-        element.style.cssText = 'background: #e5e6e8';
-        break;
-    }
+    changeBackground();
+    pagination[i].classList.add('carousel__toggle--active');
   }
 );
 
 document.body.querySelector('.carousel__button--next').addEventListener ('click', () => {
   j = list.indexOf(document.body.querySelector('.carousel__item--show'));
 	document.body.querySelector('.carousel__item--show').classList.remove('carousel__item--show');
+  document.body.querySelector('.carousel__toggle--active').classList.remove('carousel__toggle--active');
   if ((list.length - 2) >= j) {
     list[j+1].classList.add('carousel__item--show');
     } else {
       list[list.length - 1].classList.add('carousel__item--show');
     }
-    i = list.indexOf(document.body.querySelector('.carousel__item--show'));
-    switch (i) {
-      case 0:
-        element.style.cssText = 'background: #f3ebe1';
-        break;
-      case 1:
-        element.style.cssText = 'background: #eae6fc';
-        break;
-      case 2:
-        element.style.cssText = 'background: #e5e6e8';
-        break;
-    }
+    changeBackground();
+
+    pagination[i].classList.add('carousel__toggle--active');
   }
 );
 
+document.body.querySelectorAll('.carousel__toggle').forEach((element) => {
+  element.addEventListener ('click', (evt) => {
+    document.body.querySelector('.carousel__item--show').classList.remove('carousel__item--show');
+    document.body.querySelector('.carousel__toggle--active').classList.remove('carousel__toggle--active');
+    evt.target.classList.add('carousel__toggle--active');
+    list[pagination.indexOf(evt.target)].classList.add('carousel__item--show');
+    changeBackground();
+  });
+});
 
 let navMain = document.querySelector('.menu-nav');
 let navToggle = document.querySelector('.menu-nav__toggle');
