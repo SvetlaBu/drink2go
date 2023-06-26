@@ -11,22 +11,46 @@
 .control__mark {
   position: absolute;
   width: 40px;
-  height: 20px;
+  height: 21px;
   left: -50px;
   background-color: #bdbdbd;
   box-sizing: border-box;
   border-radius: 10px;
 }
 
-.control::before {
+.control::before,
+.control__radio::before {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
-  left: -50px;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: -48px;
   background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 50%;
-  border: 2px solid #bdbdbd;
   z-index: 2;
+}
+
+.control__radio::before {
+  border: 2px solid #bdbdbd;
+  box-sizing: content-box;
+}
+
+.control__input[type="checkbox"]:hover + .control__mark,
+.control__input[type="checkbox"]:active + .control__mark {
+  background-color: rgba(120, 89, 207, 0.25);
+  border: 2px solid $accent;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark {
+  background-color: $accent;
+}
+
+.control__input[type="checkbox"]:hover ~ .control::before {
+  border: 2px solid $accent;
+}
+
+.control[type="checkbox"]:checked::before {
+  left: -28px;
 }
