@@ -41,6 +41,8 @@
   background-color: #e2e2e2;
 }
 
+
+
 .range__bar::after {
   content: "";
   width: 93%;
@@ -63,27 +65,29 @@
   position: absolute;
   transform: translateY(-50%);
   background: #ffffff;
-  border: 2px solid #9070ec;
+  border: 2px solid #ffffff;
+  outline: 2px solid #9070ec;
   border-radius: 50%;
+  box-sizing: border-box;
   cursor: pointer;
   z-index: 3;
 }
 
 .range__toggle:hover,
 .range__toggle:focus {
-  width: 16px;
-  height: 16px;
   background-color: #ddd6f3;
   border: 2px solid #ffffff;
   outline: 2px solid #9070ec;
 }
 
-.range__toggle:focus {
-  width: 16px;
-  height: 16px;
+.range__toggle:active {
   background-color: #9070ec;
   border: 2px solid #ffffff;
   outline: 2px solid #9070ec;
+}
+
+.range__toggle:active:disabled {
+  outline: 2px solid #bdbdbd;
 }
 
 .range__toggle--max {
