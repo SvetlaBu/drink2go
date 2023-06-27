@@ -8,6 +8,15 @@
   cursor: pointer;
 }
 
+.control:disabled + .control__mark {
+  opacity: 0.3;
+}
+
+.control:checked:disabled + .control__mark {
+  background-color: #bdbdbd;
+  opacity: 0.3;
+}
+
 .control__mark {
   position: absolute;
   width: 40px;
@@ -18,27 +27,43 @@
   border-radius: 10px;
 }
 
-.control::before,
+.control__mark::before,
 .control__radio::before {
   content: "";
   position: absolute;
   width: 16px;
   height: 16px;
-  top: 0;
-  left: -48px;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
   background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 50%;
   z-index: 2;
+  transition: 300ms;
 }
 
 .control__radio::before {
   border: 2px solid #bdbdbd;
   box-sizing: content-box;
+  left: -48px;
+}
+
+.control__input[type="radio"]:hover + .control__radio::before,
+.control__input[type="radio"]:focus + .control__radio::before {
+  background-color: rgba(120, 89, 207, 0.25);
+  outline: 2px solid $accent;
+  border: 2px solid #ffffff;
+}
+
+.control__input[type="radio"]:checked + .control__radio::before {
+  background-color: $accent;
+  outline: 2px solid $accent;
+  border: 2px solid #ffffff;
 }
 
 .control__input[type="checkbox"]:hover + .control__mark,
-.control__input[type="checkbox"]:active + .control__mark {
+.control__input[type="checkbox"]:focus + .control__mark {
   background-color: rgba(120, 89, 207, 0.25);
   border: 2px solid $accent;
 }
@@ -47,10 +72,10 @@
   background-color: $accent;
 }
 
-.control__input[type="checkbox"]:hover ~ .control::before {
+.control__input[type="checkbox"]:hover + .control::before {
   border: 2px solid $accent;
 }
 
-.control[type="checkbox"]:checked::before {
-  left: -28px;
+.control__input[type="checkbox"]:checked + .control__mark::before {
+  left: 20px;
 }

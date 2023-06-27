@@ -6,8 +6,15 @@
   margin: 0 auto;
 }
 
-.filter__item:last-of-type {
+.filter__item:last-of-type,
+.filter__item:last-of-type:disabled {
   opacity: 0.3;
+}
+
+.filter__item:last-of-type:hover,
+.filter__item:last-of-type:focus,
+.filter__item:last-of-type:active {
+  opacity: 1;
 }
 
 .filter__title {
