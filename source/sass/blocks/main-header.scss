@@ -164,3 +164,21 @@
     content: "корзина";
   }
 }
+
+.main-header__icon:hover .main-header__logo-icon,
+.main-header__icon:focus .main-header__logo-icon {
+  color: #9070ec;
+}
+
+.main-header__icon:active .main-header__logo-icon {
+  color: #593cac;
+}
+
+.main-header__icon:hover::after,
+.main-header__icon:focus::after {
+  color: #9070ec;
+}
+
+.main-header__icon:active::after {
+  color: #593cac;
+}

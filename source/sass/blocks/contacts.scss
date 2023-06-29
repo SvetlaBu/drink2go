@@ -33,3 +33,30 @@
   margin: 0;
   color: #333333;
 }
+
+.contacts__item a:hover,
+.contacts__item a:focus {
+  color: #9070ec;
+}
+
+.contacts__item a:active {
+  color: #593cac;
+}
+
+.contacts__item:hover,
+.contacts__item:focus {
+  color: #9070ec;
+}
+
+.contacts__item:active {
+  color: #593cac;
+}
+
+.contacts__item:hover::before,
+.contacts__item:focus::before {
+  opacity: 0.7;
+}
+
+.contacts__item:active::before {
+  opacity: 0.7;
+}

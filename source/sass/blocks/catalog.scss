@@ -16,7 +16,8 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
+    column-gap: 53px;
     width: 100%;
   }
 }

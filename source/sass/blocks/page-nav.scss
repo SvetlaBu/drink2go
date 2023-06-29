@@ -18,3 +18,12 @@
   color: #333333;
   letter-spacing: 2%;
 }
+
+.page-nav__link:hover,
+.page-nav__link:focus {
+  color: #9070ec;
+}
+
+.page-nav__link:active {
+  color: #593cac;
+}
