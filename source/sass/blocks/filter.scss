@@ -6,9 +6,19 @@
   margin: 0 auto;
 }
 
+.filter {
+  @media (min-width: $tablet-width) {
+    margin: 10px;
+  }
+}
+
 .filter__item:last-of-type,
 .filter__item:last-of-type:disabled {
   opacity: 0.3;
+}
+
+.filter__item:last-of-type:checked {
+  opacity: 1;
 }
 
 .filter__item:last-of-type:hover,

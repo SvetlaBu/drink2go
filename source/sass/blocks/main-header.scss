@@ -1,6 +1,19 @@
 .main-header {
   width: 100%;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 40px;
+  }
 }
 
 .main-header__nav {
@@ -20,18 +33,46 @@
   @media (min-width: $desktop-width) {
     position: static;
     margin-right: 0;
+    flex: 0 0 27%;
+    justify-content: flex-end;
   }
 }
 
 .main-header__wrapper {
-  padding: 10px 20px;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .main-header__logo {
-  padding: 6px;
+  padding: 10px 20px;
   margin: 0;
   display: block;
+
+  @media (min-width: $tablet-width) {
+    flex: 0 0 20%;
+    width: 102px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 6px;
+    text-decoration: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex: 0 0 30%;
+    height: 60px;
+    position: relative;
+  }
 }
 
 .main-header__logo-image {
@@ -46,6 +87,13 @@
   padding: 0;
   margin: 10px;
   display: inline-block;
+  color: #333333;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    padding-right: 40px;
+    flex: 0 0 80px;
+  }
 }
 
 .main-header__logo-icon {
@@ -54,37 +102,16 @@
   padding: 15px;
 }
 
-@media (min-width: $tablet-width) {
-  .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-  }
 
-  .main-header__wrapper {
-    padding: 0;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .main-header__toggle--active {
+.main-header__toggle--active {
+  @media (min-width: $tablet-width) {
     display: none;
   }
+}
 
-  .main-header__logo {
-    flex: 0 0 20%;
-    width: 102px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    column-gap: 6px;
-    text-decoration: none;
-  }
-
-  .main-header__letters-left::before,
-  .main-header__letters-right::before {
+.main-header__letters-left::before,
+.main-header__letters-right::before {
+  @media (min-width: $tablet-width) {
     content: "D";
     visibility: visible;
     font-size: 24px;
@@ -92,30 +119,7 @@
     font-weight: 800;
   }
 
-  .main-header__letters-right::before {
-    content: "G";
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .main-header {
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding: 0 40px;
-  }
-
-  .main-header__logo {
-    flex: 0 0 30%;
-    height: 60px;
-    position: relative;
-  }
-
-  .main-header__wrapper {
-    width: 100%;
-  }
-
-  .main-header__letters-left::before,
-  .main-header__letters-right::before {
+  @media (min-width: $desktop-width) {
     content: "DRINK";
     visibility: visible;
     font-size: 24px;
@@ -123,18 +127,22 @@
     font-weight: 800;
     color: #333333;
   }
+}
 
-  .main-header__letters-right::before {
+.main-header__letters-right::before {
+  @media (min-width: $tablet-width) {
+    content: "G";
+  }
+
+  @media (min-width: $desktop-width) {
     content: "GO";
   }
+}
 
-  .main-header__icon {
-    position: relative;
-    padding-right: 40px;
-  }
 
-  .main-header__logo::after,
-  .main-header__icon::after {
+.main-header__logo::after,
+.main-header__icon::after {
+  @media (min-width: $desktop-width) {
     content: "Интернет-магазин кофейных напитков";
     position: absolute;
     top: 50%;
@@ -147,8 +155,10 @@
     font-weight: 400;
     color: #333333;
   }
+}
 
-  .main-header__icon::after {
+.main-header__icon::after {
+  @media (min-width: $desktop-width) {
     position: absolute;
     content: "войти";
     visibility: visible;
@@ -159,8 +169,10 @@
     transform: translateY(-50%);
     z-index: 2;
   }
+}
 
-  .main-header__icon:last-of-type::after {
+.main-header__icon:last-of-type::after {
+  @media (min-width: $desktop-width) {
     content: "корзина";
   }
 }
@@ -181,4 +193,8 @@
 
 .main-header__icon:active::after {
   color: #593cac;
+}
+
+.main-header__icon:active {
+  background-color: #f0ebff;
 }

@@ -142,8 +142,11 @@
 }
 
 .page-footer__copyright {
+  @media (min-width: $tablet-width) {
+    padding: 20px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-column: 1/-1;
-    padding: 20px;
   }
 }

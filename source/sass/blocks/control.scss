@@ -62,6 +62,10 @@
   border: 2px solid #ffffff;
 }
 
+.control__input[type="radio"]:checked + .control__label {
+  opacity: 1;
+}
+
 .control__input[type="checkbox"]:hover + .control__mark,
 .control__input[type="checkbox"]:focus + .control__mark {
   background-color: rgba(120, 89, 207, 0.25);
@@ -70,6 +74,7 @@
 
 .control__input[type="checkbox"]:checked + .control__mark {
   background-color: $accent;
+  opacity: 1;
 }
 
 .control__input[type="checkbox"]:hover + .control::before {

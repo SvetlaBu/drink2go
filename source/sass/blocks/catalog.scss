@@ -16,9 +16,13 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
-    column-gap: 53px;
+    justify-content: flex-start;
+    column-gap: 26px;
     width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 36px;
   }
 }
 
